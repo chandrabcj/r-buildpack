@@ -2,6 +2,10 @@
 
 echo "in supllyyyyyyyyyyyyy"
 
+sudo apt-get install libstdc++5
+sudo ln -s /usr/lib/x86_64-linux-gnu/libreadline.so.7 /usr/lib/x86_64-linux-gnu/libreadline.so.5
+sudo ln -s /usr/lib/x86_64-linux-gnu/libncurses.so.6 /usr/lib/x86_64-linux-gnu/libncurses.so.5
+
 mkdir unixODBC && cd unixODBC
 wget https://sourceforge.net/projects/unixodbc/files/unixODBC/2.2.14/unixODBC-2.2.14-linux-x86-64.tar.gz
 gunzip unixODBC-2.2.14-linux-x86-64.tar.gz
