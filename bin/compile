@@ -1,4 +1,18 @@
 #!/bin/bash
+
+mkdir unixODBC && cd unixODBC
+wget https://sourceforge.net/projects/unixodbc/files/unixODBC/2.2.14/unixODBC-2.2.14-linux-x86-64.tar.gz
+gunzip unixODBC-2.2.14-linux-x86-64.tar.gz
+tar -xvf unixODBC-2.2.14-linux-x86-64.tar
+cd unixODBC
+rm unixODBC-2.2.14-linux-x86-64.tar
+
+xport PATH=$PATH:/unixODBC/usr/local/bin/
+#RUN export ODBCINI=$HOME/.odbc.ini
+#RUN export ODBCSYSINI=/etc
+export ODBCINI=/etc/odbc.ini
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/unixODBC/usr/local/lib/
+
 set -euo pipefail
 
 BUILD_DIR=$1
