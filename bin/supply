@@ -9,6 +9,8 @@ tar -xvf unixODBC-2.2.14-linux-x86-64.tar
 cd unixODBC
 rm unixODBC-2.2.14-linux-x86-64.tar
 
+apt-get install unixodbc-dev
+
 xport PATH=$PATH:/unixODBC/usr/local/bin/
 #RUN export ODBCINI=$HOME/.odbc.ini
 #RUN export ODBCSYSINI=/etc
